@@ -1,0 +1,68 @@
+{# الصفحة الرئيسية - ثيم فخم مع سلايدر إعلانات متحرك وأيقونات #}
+{% extends "layouts.master" %}
+
+{% block content %}
+  <!-- سلايدر الإعلانات الفخم والمتحرك -->
+  <section class="relative overflow-hidden bg-stone-900 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <div class="swiper hero-slider max-w-4xl mx-auto">
+        <div class="swiper-wrapper">
+          <!-- المربع المتحرك 1: التشكيلة الجديدة -->
+          <div class="swiper-slide p-6">
+            <span class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-2 block">تشكيلة حصرية</span>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">أفخم العبايات والعطور الفريدة</h1>
+            <p class="text-stone-300 mb-6">تصاميم مبتكرة وخامات فاخرة تناسب ذوقك الرفيع</p>
+            <a href="/products" class="inline-block bg-amber-500 text-stone-950 font-bold px-8 py-3 rounded-full hover:bg-amber-400 transition shadow-lg">تسوقي التشكيلة</a>
+          </div>
+          <!-- المربع المتحرك 2: عرض الخصم -->
+          <div class="swiper-slide p-6">
+            <span class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-2 block">عروض خاصة</span>
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">خصم 20% على الإكسسوارات والهدايا</h2>
+            <p class="text-stone-300 mb-6">استخدمي كود الخصم RIO20 عند إتمام الطلب</p>
+            <a href="/products" class="inline-block bg-amber-500 text-stone-950 font-bold px-8 py-3 rounded-full hover:bg-amber-400 transition shadow-lg">احصلي على العرض</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شريط مميزات المتجر (أيقونات مرتبة وكلام فخم) -->
+  <section class="py-12 bg-stone-50 border-b border-stone-200">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <!-- ميزة 1 -->
+        <div class="p-5 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+          <div class="w-12 h-12 mx-auto mb-3 text-amber-600 flex items-center justify-center bg-amber-50 rounded-full">
+            <i class="salla-icon icon-delivery-truck text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-stone-800 mb-1">توصيل سريع</h3>
+          <p class="text-xs text-stone-500">لجميع مدن المملكة والعالم</p>
+        </div>
+        <!-- ميزة 2 -->
+        <div class="p-5 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+          <div class="w-12 h-12 mx-auto mb-3 text-amber-600 flex items-center justify-center bg-amber-50 rounded-full">
+            <i class="salla-icon icon-award-badge text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-stone-800 mb-1">جودة عالية</h3>
+          <p class="text-xs text-stone-500">أقمشة وزيوت عطرية أصلية</p>
+        </div>
+        <!-- ميزة 3 -->
+        <div class="p-5 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+          <div class="w-12 h-12 mx-auto mb-3 text-amber-600 flex items-center justify-center bg-amber-50 rounded-full">
+            <i class="salla-icon icon-gift text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-stone-800 mb-1">تغليف فاخر</h3>
+          <p class="text-xs text-stone-500">صناديق إهداء مميزة وأنيقة</p>
+        </div>
+        <!-- ميزة 4 -->
+        <div class="p-5 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
+          <div class="w-12 h-12 mx-auto mb-3 text-amber-600 flex items-center justify-center bg-amber-50 rounded-full">
+            <i class="salla-icon icon-headset text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-stone-800 mb-1">دعم على مدار الساعة</h3>
+          <p class="text-xs text-stone-500">خدمة عملاء متواجدة لخدمتك</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
