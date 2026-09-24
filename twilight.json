@@ -2,5 +2,6 @@
   "name": "rio-store-theme",
   "version": "1.0.0",
   "author": "Rio",
-  "settings": []
+  "settings": [],
+  "components": []
 }
