@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ store.name }}</title>
+  
+  {# مكتبة Swiper للسلايدر المتحرك #}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  {# مكتبة Tailwind CSS للتنسيق الفخم #}
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+
+  <!-- الهيدر الأنيق والمثبت في الأعلى -->
+  <header class="bg-stone-900 text-white sticky top-0 z-50 shadow-md border-b border-stone-800">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold tracking-wide text-amber-400">{{ store.name|default('متجر الفخامة') }}</a>
+      <nav class="hidden md:flex space-x-6 space-x-reverse text-sm font-medium">
+        <a href="/" class="hover:text-amber-400 transition">الرئيسية</a>
+        <a href="/categories" class="hover:text-amber-400 transition">الأقسام</a>
+        <a href="/products" class="hover:text-amber-400 transition">جميع المنتجات</a>
+      </nav>
+      <div class="flex items-center space-x-4 space-x-reverse">
+        <a href="/cart" class="p-2 bg-stone-800 rounded-full hover:bg-stone-700 transition">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- محتوى الصفحات الشاغر -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- الفوتر الفخم -->
+  <footer class="bg-stone-900 text-stone-400 py-10 border-t border-stone-800 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2 text-stone-200 font-semibold text-lg">{{ store.name|default('متجر الفخامة') }}</p>
+      <p class="text-xs text-stone-500">جميع الحقوق محفوظة &copy; {{ "now"|date("Y") }}</p>
+    </div>
+  </footer>
+
+  {# سكربت تشغيل السلايدر المتحرك تلقائياً #}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.querySelector('.hero-slider')) {
+        new Swiper('.hero-slider', {
+          loop: true,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+          },
+          effect: 'fade',
+          fadeEffect: { crossFade: true },
+        });
+      }
+    });
+  </script>
+</body>
+</html>
