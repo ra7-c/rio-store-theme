@@ -1,6 +1,15 @@
 {
   "name": "rio-store-theme",
+  "title": {
+    "ar": "Rio Theme",
+    "en": "Rio Theme"
+  },
+  "description": {
+    "ar": "Rio Store Theme",
+    "en": "Rio Store Theme"
+  },
   "version": "1.0.0",
-  "features": [],
+  "author": "Rio",
+  "settings": [],
   "components": []
 }
